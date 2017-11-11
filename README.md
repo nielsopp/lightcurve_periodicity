@@ -50,3 +50,42 @@ Note that the observational uncertainties are assumed to be Gaussian in the unit
 
 ## Output
 
+The python scripts produce output in *.npy files, each containing a one-dimensional array.
+
+### Output of Gibbs.py
+
+* timebins.npy: Time values corresponding to the grid points used in the reconstruction.
+* freqs.npy: Frequencies corresponding to the Fourier grid points.
+* power1.npy (power2.npy): Current mean of the natural logarithm of the power spectrum from the first (second) Gibbs-sampling chain. This is updated while the code runs. The comparison of the two means defines convergence (see above).
+* power1_xxxxx.npy (power2_xxxxx.npy): Power-spectrum samples from the first (second) chain. Only the samples beyond the burn-in phase and spaced a correlation length apart are saved.
+* m1_xxxxx.npy (m2_xxxxx.npy): Lightcurve samples from the first (second) chain. Only the samples beyond the burn-in phase and spaced a correlation length apart are saved. Note that the mean of the data is subtracted.
+
+
+### Output of critical_filter.py
+
+* timebins.npy: Time values corresponding to the grid points used in the reconstruction.
+* freqs.npy: Frequencies corresponding to the Fourier grid points.
+* power.npy: Critical-filter estimate of the power spectrum. This is updated as the iteration progresses.
+* m.npy: Critical-filter estimate of the lightcurve. This is updated as the iteration progresses. Note htat the mean of the data is subtracted.
+* Dhat.npy: Point-wise posterior variance estimate for the lightcurve.
+* invHessdiag.npy: Point-wise posterior variance estimate for the power spectrum.
+
+
+### Output of power_fit.py
+
+* posterior_mean_lightcurve.npy: Posterior mean of the lightcurve (based on Gibbs sampling).
+* posterior_uncertainty_lightcurve.npy: Point-wise one-sigma uncertainty estimate for the lightcurve (based on Gibbs sampling).
+* critical_filter_lightcurve.npy: Lightcurve estimate from the critical filter.
+* uncertainty_critical_filter_lightcurve.npy: One-sigma uncertainty estimate for the lightcurve based on the critical filter.
+* power_of_posterior_mean_lightcurve.npy: The power contained in the posterior-mean lightcurve estimate (based on Gibbs sampling). This will in general have less power than the estimated power spectrum.
+* post_mean_power.npy: Posterior mean of the power spectrum (based on Gibbs sampling).
+* lower_95perc_power.npy (lower_68perc_power.npy): Lower bound of the frequency-wise 95-percent (68-percent) confidence interval for the power spectrum (based on Gibbs sampling).
+* upper_95perc_power.npy (upper_68perc_power.npy): Upper bound of the frequency-wide 95-percent (68-percent) confidence interval for the power spectrum (based on Gibbs sampling).
+* power_spectrum_model_fit.npy: Model fit to the power spectrum results of the Gibbs sampling, as described in the paper.
+* critical_filter_power.npy: Critical-filter estimate for the power spectrum.
+* critical_filter_power_uncertainty.npy: Frequency-wise uncertainty estimate for the critical-filter power spectrum.
+
+
+## Contact
+
+For questions/comments/bugs, please contact niels@cita.utoronto.ca
