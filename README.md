@@ -13,7 +13,7 @@ The python scripts contained in this repository rely heavily on the following pa
 * [nifty](http://wwwmpa.mpa-garching.mpg.de/ift/nifty/)
 * [matplotlib](http://matplotlib.org) (for final plotting purposes only)
 
-Once these are installed, they should run out-of-the box under python 2.6 and above.
+Once these are installed, they should run out-of-the box under python 2.7.
 
 
 ## Code pieces
