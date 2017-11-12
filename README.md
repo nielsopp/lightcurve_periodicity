@@ -23,7 +23,7 @@ The code consists of three separate python scripts, each taking parameters descr
 * critical_filter.py runs the critical-filter analysis of a data file.
 * power_fit.py extracts special periods from the Gibbs reconstruction as described in the paper and produces plots in the style of the paper figures. This assumes that Gibbs sampling has been run; the critical-filter results are optional.
 
-An example bash script that runs on the example data contained in the txt file (corresponding to Fig. 5 of the paper) is given as lightcurve_analysis.sh. Note that, in its default version, this script deletes the samples of the Gibbs-sampling analysis after they have been analyzed.
+An example bash script that runs on the example data contained in the txt file (corresponding to Fig. 6 of the paper) is given as lightcurve_analysis.sh. Note that, in its default version, this script deletes the samples of the Gibbs-sampling analysis after they have been analyzed.
 
 
 ## Parameters
