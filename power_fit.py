@@ -233,8 +233,6 @@ plt.ylim(ylocs.min(),ylocs.max())
 plt.ylabel(r'power density [mag$^2$ day]',fontsize=9)
 for ind in special_indices:
     plt.axvline(np.log10(freqs[ind]),color='grey',lw=5,alpha=0.8,ymin=0,ymax=0.3)
-#for ii in [1]:#range(2):
-#    plt.axvline(np.log10(ii*4.652e-3),color='brown',lw=2,ls='--',alpha=0.7)
 plt.savefig(directory + 'twopanelplot.pdf')
 #plt.show()
 
